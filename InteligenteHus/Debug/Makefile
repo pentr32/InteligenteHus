@@ -33,16 +33,16 @@ LINKER_SCRIPT_DEP:=
 
 # Every subdirectory with source files must be described here
 SUBDIRS :=  \
-../MatrixKeypad \
-../ServoMotor
+../Menu
 
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
-../MatrixKeypad/Keypad.c \
-../MatrixKeypad/lcd.c \
+../Menu/Keypad.c \
+../Menu/lcd.c \
 ../main.c \
-../ServoMotor/Motor.c
+../Menu/Motor.c \
+../Menu/Ventilator.c
 
 
 PREPROCESSING_SRCS += 
@@ -52,28 +52,32 @@ ASM_SRCS +=
 
 
 OBJS +=  \
-MatrixKeypad/Keypad.o \
-MatrixKeypad/lcd.o \
+Menu/Keypad.o \
+Menu/lcd.o \
 main.o \
-ServoMotor/Motor.o
+Menu/Motor.o \
+Menu/Ventilator.o
 
 OBJS_AS_ARGS +=  \
-MatrixKeypad/Keypad.o \
-MatrixKeypad/lcd.o \
+Menu/Keypad.o \
+Menu/lcd.o \
 main.o \
-ServoMotor/Motor.o
+Menu/Motor.o \
+Menu/Ventilator.o
 
 C_DEPS +=  \
-MatrixKeypad/Keypad.d \
-MatrixKeypad/lcd.d \
+Menu/Keypad.d \
+Menu/lcd.d \
 main.d \
-ServoMotor/Motor.d
+Menu/Motor.d \
+Menu/Ventilator.d
 
 C_DEPS_AS_ARGS +=  \
-MatrixKeypad/Keypad.d \
-MatrixKeypad/lcd.d \
+Menu/Keypad.d \
+Menu/lcd.d \
 main.d \
-ServoMotor/Motor.d
+Menu/Motor.d \
+Menu/Ventilator.d
 
 OUTPUT_FILE_PATH +=InteligenteHus.elf
 
@@ -89,14 +93,14 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
-MatrixKeypad/Keypad.o: ../MatrixKeypad/Keypad.c
+Menu/Keypad.o: ../Menu/Keypad.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\include"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega2560" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
 	@echo Finished building: $<
 	
 
-MatrixKeypad/lcd.o: ../MatrixKeypad/lcd.c
+Menu/lcd.o: ../Menu/lcd.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\include"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega2560" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
@@ -110,7 +114,14 @@ MatrixKeypad/lcd.o: ../MatrixKeypad/lcd.c
 	@echo Finished building: $<
 	
 
-ServoMotor/Motor.o: ../ServoMotor/Motor.c
+Menu/Motor.o: ../Menu/Motor.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\include"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega2560" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+Menu/Ventilator.o: ../Menu/Ventilator.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\include"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -mrelax -g2 -Wall -mmcu=atmega2560 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.3.300\gcc\dev\atmega2560" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

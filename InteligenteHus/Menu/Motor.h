@@ -13,4 +13,8 @@ void ServoMotor_Init();
 
 void SpinMotor();
 
+void CloseWindows();
+
+void OpenWindows();
+
 #endif /* MOTOR_H_ */

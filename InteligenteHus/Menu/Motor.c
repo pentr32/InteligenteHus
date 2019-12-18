@@ -36,7 +36,7 @@ void SpinMotor()
 
 void OpenWindows()
 {
-	//OCR1A = 1000;
+	//OCR2A = 1000;
 	for(OCR1A=2000;OCR1A >= 1000;OCR1A--)
 	{
 		_delay_ms(2);
@@ -45,7 +45,7 @@ void OpenWindows()
 
 void CloseWindows()
 {
-	//OCR1A = 2000;
+	//OCR2A = 2000;
 	for(OCR1A=1000;OCR1A <= 2000;OCR1A++)
 	{
 		_delay_ms(2);

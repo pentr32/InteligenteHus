@@ -11,24 +11,17 @@
 #include <avr/io.h>
 #include <util/delay.h>
 #include <avr/interrupt.h>
-#include "MatrixKeypad/Keypad.h"
-#include "ServoMotor/Motor.h"
+#include "Menu/Keypad.h"
 	
 int main(void)
 {	
 	MaxtrixKeypad_Init();
 	ServoMotor_Init();
 	
-	//SpinMotor();
 	
 	while(1)
 	{
-		DecodeKeyboard();
+		Menu();
 	}
-}
-
-void Menu()
-{
-	
 }
 

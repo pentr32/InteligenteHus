@@ -16,6 +16,6 @@ int ColumnScan();							//Funktion der styre C1-C4 via 4 portbit.
 
 int ReadRows();								//Funktion der læse R1-R4 og returner den specifik row.
 
-void DecodeKeyboard();						//Funktion der decoder mine knapper på bestemt koloner og rækker.
+char DecodeKeyboard();						//Funktion der decoder mine knapper på bestemt koloner og rækker.
 
 #endif /* KEYPAD_H_ */

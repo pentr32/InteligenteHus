@@ -8,33 +8,13 @@
 #define F_CPU 16E6
 #include <avr/io.h>
 #include <util/delay.h>
+#include <stdbool.h>
+#include "Settings.h"
+#include "Motor.h"
 #include "Keypad.h"
 #include "lcd.h"
+#include "Ventilator.h"
 
-#pragma region Defines
-
-// Output Port
-#define C1 PK3	// Channel 0
-#define C2 PK2	// Channel 1
-#define C3 PK1	// Channel 2
-#define C4 PK0	// Channel 3
-
-// Input Pin
-#define R1 PK4
-#define R2 PK5
-#define R3 PK6
-#define R4 PK7
-
-// Column, Row Max antal
-#define COLUMN_MAX 4
-#define ROW_MAX 4
-#pragma endregion
-
-#pragma region Global variables
-
-char button[COLUMN_MAX][ROW_MAX] = {{'1', '4', '7', '*'}, {'2', '5', '8', '0'}, {'3', '6', '9', '#'}, {'A', 'B', 'C', 'D'}};
-	
-#pragma endregion
 
 // Funktion der initialiser Pull-up
 void MaxtrixKeypad_Init()
@@ -90,7 +70,7 @@ int ReadRows()
 {		
 	if(~PINK & (1<<R1))
 	{
-		_delay_ms(10); 
+		_delay_ms(40); 
 		if(~PINK & (1<<R1))
 		{ 
 			return 0;					// PK4
@@ -103,7 +83,7 @@ int ReadRows()
 	
 	if(~PINK & (1<<R2))
 	{
-		_delay_ms(10); 
+		_delay_ms(40); 
 		if(~PINK & (1<<R2))
 		{
 			return 1;					// PK5
@@ -116,7 +96,7 @@ int ReadRows()
 	
 	if(~PINK & (1<<R3))
 	{
-		_delay_ms(10); 
+		_delay_ms(40); 
 		if(~PINK & (1<<R3))
 		{
 			return 2;					// PK6
@@ -129,7 +109,7 @@ int ReadRows()
 	
 	if(~PINK & (1<<R4)) 
 	{
-		_delay_ms(10); 
+		_delay_ms(40); 
 		if(~PINK & (1<<R4))
 		{
 			return 3;					// PK7
@@ -142,15 +122,55 @@ int ReadRows()
 }
 
 // Funktion der decoder mine knapper på bestemt koloner og rækker.
-void DecodeKeyboard()
+char DecodeKeyboard()
 {	
 	int column = ColumnScan();
 	int row = ReadRows();
-	char buffer[16];
 	
 	if(row != -1)
 	{	
-		sprintf(buffer, "%c", button[column][row]); 
-		lcd_puts(buffer);
+		//sprintf(buffer, "%c", button[column][row]); 
+		//lcd_puts(buffer);
+		
+		return button[column][row];
+	}
+}
+
+void Menu()
+{
+	char buffer[16];
+	
+	char input_Button = DecodeKeyboard();
+	
+	switch(input_Button)
+	{
+		case motor_button:
+			
+			//sprintf(buffer, "%c", 'T'); lcd_puts(buffer);
+			
+			motor_Enabled = !motor_Enabled;
+			
+			if(motor_Enabled)
+			{
+				 OpenWindows(); 
+				 
+				 lcd_clrscr(); 
+				 lcd_puts("Window is open");
+			}
+			
+			if(!motor_Enabled)
+			{
+				 CloseWindows(); 
+				 
+				 lcd_clrscr(); 
+				 lcd_puts("Window is closed");
+			}
+			
+		break;
+		
+		case ventilator_button:
+			ventilator_Enabled = !ventilator_Enabled;
+			
+		break;
 	}
 }

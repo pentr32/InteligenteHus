@@ -2,11 +2,13 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
-MatrixKeypad\Keypad.c
+Menu\Keypad.c
 
-MatrixKeypad\lcd.c
+Menu\lcd.c
 
 main.c
 
-ServoMotor\Motor.c
+Menu\Motor.c
+
+Menu\Ventilator.c
 

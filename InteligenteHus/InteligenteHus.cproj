@@ -46,15 +46,15 @@
     <avrtoolinterfaceclock>125000</avrtoolinterfaceclock>
     <AsfFrameworkConfig>
       <framework-data xmlns="">
-  <options />
-  <configurations />
-  <files />
-  <documentation help="" />
-  <offline-documentation help="" />
-  <dependencies>
-    <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.47.0" />
-  </dependencies>
-</framework-data>
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.47.0" />
+        </dependencies>
+      </framework-data>
     </AsfFrameworkConfig>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
@@ -138,31 +138,39 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="MatrixKeypad\Keypad.c">
+    <Compile Include="Menu\Keypad.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="MatrixKeypad\Keypad.h">
+    <Compile Include="Menu\Keypad.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="MatrixKeypad\lcd.c">
+    <Compile Include="Menu\lcd.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="MatrixKeypad\lcd.h">
+    <Compile Include="Menu\lcd.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="main.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="ServoMotor\Motor.c">
+    <Compile Include="Menu\Motor.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="ServoMotor\Motor.h">
+    <Compile Include="Menu\Motor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Menu\Settings.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Menu\Ventilator.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Menu\Ventilator.h">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="MatrixKeypad" />
-    <Folder Include="ServoMotor" />
+    <Folder Include="Menu" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>
