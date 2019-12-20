@@ -10,12 +10,14 @@
 #define KEYPAD_H_
 
 // Function proprieties.
-void MaxtrixKeypad_Init();					//Funktion der initialiser Pull-up
+void MaxtrixKeypad_Init();					// Funktion der initialiser Pull-up
 
-int ColumnScan();							//Funktion der styre C1-C4 via 4 portbit.
+int ColumnScan();							// Funktion der styre C1-C4 via 4 portbit.
 
-int ReadRows();								//Funktion der læse R1-R4 og returner den specifik row.
+int ReadRows();								// Funktion der læse R1-R4 og returner den specifik row.
 
-char DecodeKeyboard();						//Funktion der decoder mine knapper på bestemt koloner og rækker.
+char DecodeKeyboard();						// Funktion der decoder mine knapper på bestemt koloner og rækker.
+
+void Menu();								// Funktion der styre de forskellige enheder vha. keypad.
 
 #endif /* KEYPAD_H_ */

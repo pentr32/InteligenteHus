@@ -159,9 +159,6 @@
     <Compile Include="Menu\Motor.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Menu\Settings.h">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="Menu\Ventilator.c">
       <SubType>compile</SubType>
     </Compile>

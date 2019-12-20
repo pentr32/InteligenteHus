@@ -14,14 +14,15 @@
 #include "Menu/Keypad.h"
 	
 int main(void)
-{	
+{		
 	MaxtrixKeypad_Init();
 	ServoMotor_Init();
-	
+	Ventilator_Init();
 	
 	while(1)
 	{
 		Menu();
+		Check_Temperatur();
 	}
 }
 

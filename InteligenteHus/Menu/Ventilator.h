@@ -5,14 +5,13 @@
  *  Author: robe1819
  */ 
 
-
 #ifndef VENTILATOR_H_
 #define VENTILATOR_H_
 
 void Ventilator_Init();
 
-float Check_Temperatur();	
+void Check_Temperatur();	
 
-void Temperatur_LED_Show();
+void Toggle_Ventilator();
 
 #endif /* VENTILATOR_H_ */
