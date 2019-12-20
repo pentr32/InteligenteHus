@@ -78,6 +78,13 @@ Ind i **Keypad.c** har jeg en multidimensional array til så jeg kan bedre ved p
 Her er der billeder af min **Logic Analyzer** til keypad'en.
 ![enter image description here](https://i.imgur.com/T5p90uy.png)
 
+Ved hjælp af keypad man kan styre forskellige enheder.
+
+| Knap   |Funktionalitet       
+| ------------ |:-------------:|
+| A    | Toggle Servomotor |
+| B    | Toggle DC-Motor |
+
 # Funktioner og filer
 ***Keypad.c***
 > MatrixKeypad_Init();
@@ -98,3 +105,7 @@ Funktion der decoder mine knapper på bestemt koloner og rækker og returner den
 > Menu();
 
 Funktion der styre de forskellige enheder vha. keypad.
+
+***keypad.h***
+Her der ligger alle mine funktion proprieties.
+
