@@ -52,7 +52,8 @@ En 4x4 Keypad som har:
  ![enter image description here](https://i.imgur.com/CEyCjmq.gif)
  
  ![enter image description here](https://i.imgur.com/rT1wfdz.png)
- I min situation har jeg lagt keypad til alle PORTK
+
+I min situation har jeg lagt keypad til alle PORTK
 
 | Output Port   |Arduino Port       
 | ------------- |:-------------:|
@@ -69,7 +70,7 @@ En 4x4 Keypad som har:
 | R3    | PK6 |
 | R4    | PK7 |  
 
-Den måde som jeg har programmeret min keypad'en det er at jeg sætter logik 1 på alle **Output port**så tjekker jeg hver koloner ved at sætter logik 0. F.eks. den første vi tjekker det er C1 så vi sætter 0 på den output der så tjekker vi hver rækker.
+Den måde som jeg har programmeret min keypad'en det er at jeg sætter logik 1 på alle **Output port** så tjekker jeg hver koloner ved at sætter logik 0. F.eks. den første vi tjekker det er C1 så vi sætter 0 på den output der så tjekker vi hver rækker.
 
 Ind i **Keypad.c** har jeg en multidimensional array til så jeg kan bedre ved på hvilken knap trykker jeg.
 
