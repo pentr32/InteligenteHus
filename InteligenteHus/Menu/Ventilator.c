@@ -25,6 +25,7 @@ uint8_t r;
 uint8_t g;
 uint8_t b;
 
+// Funktion der initialiser DC-Motoren.
 void Ventilator_Init()
 {	
 	ADMUX = (1 << REFS0);	// 5V supply used for ADC reference, select ADC channel 0, datasheet 28.9.1
@@ -41,6 +42,7 @@ void Ventilator_Init()
 	DDRB |= (1<<PB7) | (1<<PB6) | (1<<PB5);
 }
 
+// Funktion der tjekker temperaturen.
 void Check_Temperatur()
 {
 	if (!(ADCSRA & (1 << ADSC)))
@@ -71,6 +73,7 @@ void Check_Temperatur()
 	}
 }
 
+// Funktion der tænder/slukke DC-Motoren.
 void Toggle_Ventilator()
 {
 	ventilator_Enabled = !ventilator_Enabled;

@@ -15,6 +15,7 @@
 // Motor settings
 bool motor_Enabled = false;
 
+// Funktion der initialiser ServoMotoren.
 void ServoMotor_Init()
 {
 	DDRE |= (1<<DDE5);
@@ -31,6 +32,7 @@ void ServoMotor_Init()
 
 }
 
+// Funktion der dreje motoren 90 grader til hørje.
 void OpenWindows()
 {
 	//OCR2A = 1000;
@@ -40,6 +42,7 @@ void OpenWindows()
 	}
 }
 
+// Funktion der dreje motoren 90 grader til venstre.
 void CloseWindows()
 {
 	//OCR2A = 2000;
