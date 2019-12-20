@@ -146,3 +146,12 @@ Her ligger alle mine funktion proprieties til servo motoren.
 
 Funktion der initialiser DC-Motoren.
 
+> Check_Temperatur();
+
+Funktion der tjekker temperaturen.
+
+> Toggle_Ventilatoren();
+
+Funktion der tænder/slukke DC-Motoren. Same princip som **Toggle_ServoMotoren();**
+***Ventilator.h***
+> Her ligger min funktion proprieties til **DC-Motoren**
