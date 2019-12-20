@@ -107,5 +107,16 @@ Funktion der decoder mine knapper på bestemt koloner og rækker og returner den
 Funktion der styre de forskellige enheder vha. keypad.
 
 ***keypad.h***
+
 Her der ligger alle mine funktion proprieties.
+
+***lcd.c*** -  ***lcd.h***
+
+De styre LCD'en funktionalitet.
+
+***Motor.c***
+
+> ServoMotor_Init();
+
+Funktion der initialiser ServoMotoren.
 
