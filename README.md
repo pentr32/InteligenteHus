@@ -19,8 +19,8 @@ En AVR controller som hedder ATMega2560 som har:
 - SRAM: 8 KB
 - EEPROM: 4 KB
 - Flash Memory på 256 KB
-- 
-- ![enter image description here](https://i.imgur.com/0w2KneB.png)
+
+ ![enter image description here](https://i.imgur.com/0w2KneB.png)
 
 En LCD display:
 - Størrelse: 2x16
