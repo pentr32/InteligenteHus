@@ -120,3 +120,19 @@ De styre LCD'en funktionalitet.
 
 Funktion der initialiser ServoMotoren.
 
+> OpenWindows();
+
+Funktion der dreje motoren 90 grader til hørje.
+
+> CloseWindows();
+
+Funktion der dreje motoren 90 grader til venstre.
+
+> Toggle_ServoMotor();
+
+Funktion der toggle servomotoren ved at flippe motor_Enabled med sig selv.
+
+    motor_Enabled = !motor_Enabled;
+
+Hvis motor_Enabled er sæt til true så kører **OpenWindows()** funktionen en gang, og hvis den er sæt til false så kører **CloseWindows();** funktionen.
+
