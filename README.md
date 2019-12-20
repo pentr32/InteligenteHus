@@ -74,7 +74,11 @@ Den måde som jeg har programmeret min keypad'en det er at jeg sætter logik 1 p
 
 Ind i **Keypad.c** har jeg en multidimensional array til så jeg kan bedre ved på hvilken knap trykker jeg.
 
-    char button[COLUMN_MAX][ROW_MAX] = {{'1', '4', '7', '*'}, {'2', '5', '8', '0'}, {'3', '6', '9', '#'}, {'A', 'B', 'C', 'D'}};
+     // Column, Row Max antal
+     #define COLUMN_MAX 4
+     #define ROW_MAX 4
+
+     char button[COLUMN_MAX][ROW_MAX] = {{'1', '4', '7', '*'}, {'2', '5', '8', '0'}, {'3', '6', '9', '#'}, {'A', 'B', 'C', 'D'}};
 
 Her er der billeder af min **Logic Analyzer** til keypad'en.
 ![enter image description here](https://i.imgur.com/T5p90uy.png)
