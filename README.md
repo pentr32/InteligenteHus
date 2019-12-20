@@ -1,7 +1,7 @@
 
 # Den Inteligente Hus
 
-![enter image description here](https://ilearn.eucsyd.dk/pluginfile.php/256897/mod_page/content/8/smart-home.jpg)
+![enter image description here](https://i.imgur.com/V27wEM0.jpg)
 
 Et software der kan styre forskellige ting f.eks. servomotor, DC motor ved hjælp af en 4x4 keypad. Ideen var at vise dig en demo, hvordan du kan gøre dit lokale hjem til et intelligent hus. 
 
@@ -20,13 +20,13 @@ En AVR controller som hedder ATMega2560 som har:
 - EEPROM: 4 KB
 - Flash Memory på 256 KB
 - 
-![enter image description here](https://ilearn.eucsyd.dk/pluginfile.php/255056/course/section/67163/MEGA2560.png)
+- ![enter image description here](https://i.imgur.com/0w2KneB.png)
 
 En LCD display:
 - Størrelse: 2x16
 - Model: 1602
 
-![enter image description here](https://ilearn.eucsyd.dk/pluginfile.php/255056/course/section/67164/LCD%20display%20%28Custom%29%20%283%29.jpg)
+![enter image description here](https://i.imgur.com/cQVI2pS.jpg)
 
 Som har:
  - VSS: Pin der går til 0 V (eller ground)
@@ -41,8 +41,7 @@ Som har:
 
 En  DC-Motor. Og til at styre DC-Motoren så har jeg brugt en PMIC motordrive og fordi DC-Motoren bruge rigtig meget strøm så skulle jeg sæt en breadboard PSU.
 
-![enter image description here](https://ilearn.eucsyd.dk/pluginfile.php/255056/course/section/67167/DC_motor_on_breadboard.jpg)
-
+![enter image description here](https://i.imgur.com/hhbzaOh.jpg)
 
 En termometer.
 
@@ -50,7 +49,7 @@ En 4x4 Keypad som har:
  - 4 Input pin (R1-R4)
  - 4 Output port (C1-C4)
  
- ![enter image description here](https://ilearn.eucsyd.dk/pluginfile.php/256946/mod_assign/intro/4x4-matrix-keypad.gif)
+ ![enter image description here](https://i.imgur.com/CEyCjmq.gif)
  
  ![enter image description here](https://i.imgur.com/rT1wfdz.png)
  I min situation har jeg lagt keypad til alle PORTK
