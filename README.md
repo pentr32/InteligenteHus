@@ -136,3 +136,13 @@ Funktion der toggle servomotoren ved at flippe motor_Enabled med sig selv.
 
 Hvis motor_Enabled er sæt til true så kører **OpenWindows()** funktionen en gang, og hvis den er sæt til false så kører **CloseWindows();** funktionen.
 
+***Motor.h***
+
+Her ligger alle mine funktion proprieties til servo motoren.
+
+***Ventilator.c***
+
+> Ventilator_Init();
+
+Funktion der initialiser DC-Motoren.
+
